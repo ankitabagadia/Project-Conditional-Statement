@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <input type="text" id="inputValue">
+    <button onclick="findDay()">Check</button>
+    <h1 id="output">Week of the day:</h1>
+
+    <script>
+        function findDay(){
+            console.log("click");
+            var value = parseInt(document.getElementById("inputValue").value);
+            var day
+            console.log(value,typeof value);
+
+            switch(value){
+                case 0:
+                    console.log("Monday");
+                    break;
+
+                 case 1:
+                    console.log("Tuesday");
+                    break;
+
+                 case 2:
+                    console.log("Wednesday");
+                    break;
+
+                 case 3:
+                    console.log("Thursday");
+                    break;
+
+                 case 4:
+                    console.log("Friday");
+                    break;
+
+                 case 5:
+                    console.log("Saturday");
+                    break;
+
+                 case 6:
+                    console.log("Sunday");
+                    break;
+
+                 default:
+                    console.log("invalid number");
+                    break;
+            }
+            console.log("day",day);
+            document.getElementById("output").innerHTML = "Week of the day:"+day;
+        }
+    </script>
+</body>
+</html>
